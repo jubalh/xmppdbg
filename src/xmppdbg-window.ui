@@ -53,6 +53,22 @@
             </layout>
           </object>
         </child>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="hexpand">true</property>
+            <property name="vexpand">true</property>
+            <property name="child">
+              <object class="GtkTextView" id="main_text_view">
+                <property name="monospace">true</property>
+                <property name="editable">true</property>
+              </object>
+            </property>
+            <layout>
+              <property name="column">0</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
       </object>
     </child>
   </template>
