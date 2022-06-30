@@ -18,10 +18,19 @@
     <child>
       <object class="GtkGrid" id="maingrid">
         <child>
+          <object class="GtkLabel" id="label_jid">
+            <property name="label">JID</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
           <object class="GtkButton" id="button1">
             <property name="label">Button 1</property>
             <layout>
-              <property name="column">0</property>
+              <property name="column">1</property>
               <property name="row">0</property>
             </layout>
           </object>

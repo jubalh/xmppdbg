@@ -26,6 +26,7 @@ struct _XmppdbgWindow
   /* Template widgets */
   GtkHeaderBar        *header_bar;
   GtkGrid             *maingrid;
+  GtkLabel            *label_jid;
   GtkButton           *button1;
 };
 
@@ -39,6 +40,7 @@ xmppdbg_window_class_init (XmppdbgWindowClass *klass)
   gtk_widget_class_set_template_from_resource (widget_class, "/com/github/jubalh/xmppdbg/xmppdbg-window.ui");
   gtk_widget_class_bind_template_child (widget_class, XmppdbgWindow, header_bar);
   gtk_widget_class_bind_template_child (widget_class, XmppdbgWindow, maingrid);
+  gtk_widget_class_bind_template_child (widget_class, XmppdbgWindow, label_jid);
   gtk_widget_class_bind_template_child (widget_class, XmppdbgWindow, button1);
 }
 
