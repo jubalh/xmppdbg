@@ -24,21 +24,34 @@
             <child>
               <object class="GtkEntry" id="entr_jid">
                 <property name="placeholder-text">JID</property>
+                <property name="margin-start">2</property>
+                <property name="margin-top">2</property>
+                <property name="margin-bottom">2</property>
               </object>
             </child>
             <child>
               <object class="GtkPasswordEntry" id="entr_password">
                 <property name="placeholder-text">Password</property>
+                <property name="margin-start">2</property>
+                <property name="margin-top">2</property>
+                <property name="margin-bottom">2</property>
               </object>
             </child>
             <child>
               <object class="GtkEntry" id="entr_resource">
                 <property name="placeholder-text">Resource</property>
+                <property name="margin-start">2</property>
+                <property name="margin-top">2</property>
+                <property name="margin-bottom">2</property>
               </object>
             </child>
             <child>
               <object class="GtkButton" id="btn_connect">
                 <property name="label">Connect</property>
+                <property name="margin-start">2</property>
+                <property name="margin-top">2</property>
+                <property name="margin-bottom">2</property>
+                <property name="margin-end">2</property>
               </object>
             </child>
           </object>
@@ -50,6 +63,8 @@
             <property name="child">
               <object class="GtkTextView" id="incoming_text_view">
                 <property name="monospace">true</property>
+                <property name="margin-start">2</property>
+                <property name="margin-end">2</property>
               </object>
             </property>
           </object>
@@ -60,10 +75,12 @@
             <child>
               <object class="GtkScrolledWindow">
                 <property name="hexpand">true</property>
-                <property name="vexpand">true</property>
+                <property name="vexpand">false</property>
                 <property name="child">
                   <object class="GtkTextView" id="outgoing_text_view">
                     <property name="monospace">true</property>
+                    <property name="margin-top">5</property>
+                    <property name="margin-bottom">2</property>
                   </object>
                 </property>
               </object>
@@ -71,6 +88,10 @@
             <child>
               <object class="GtkButton" id="btn_send">
                 <property name="label">Send</property>
+                <property name="margin-start">2</property>
+                <property name="margin-top">2</property>
+                <property name="margin-bottom">2</property>
+                <property name="margin-end">2</property>
               </object>
             </child>
           </object>
