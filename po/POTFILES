@@ -1,0 +1,7 @@
+data/com.github.jubalh.xmppdbg.desktop.in
+data/com.github.jubalh.xmppdbg.appdata.xml.in
+data/com.github.jubalh.xmppdbg.gschema.xml
+src/xmppdbg-window.ui
+src/main.c
+src/xmppdbg-window.c
+
