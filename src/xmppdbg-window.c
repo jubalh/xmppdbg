@@ -25,7 +25,7 @@ struct _XmppdbgWindow
 
   /* Template widgets */
   GtkHeaderBar        *header_bar;
-  GtkBox              *main_box;
+  GtkButton           *btn_connect;
 };
 
 G_DEFINE_TYPE (XmppdbgWindow, xmppdbg_window, GTK_TYPE_APPLICATION_WINDOW)
@@ -37,11 +37,27 @@ xmppdbg_window_class_init (XmppdbgWindowClass *klass)
 
   gtk_widget_class_set_template_from_resource (widget_class, "/com/github/jubalh/xmppdbg/xmppdbg-window.ui");
   gtk_widget_class_bind_template_child (widget_class, XmppdbgWindow, header_bar);
-  gtk_widget_class_bind_template_child (widget_class, XmppdbgWindow, main_box);
+  gtk_widget_class_bind_template_child (widget_class, XmppdbgWindow, btn_connect);
+}
+
+static void
+xmppdbg_window__cb (GAction *action G_GNUC_UNUSED,
+                            GVariant         *parameter G_GNUC_UNUSED,
+                            XmppdbgWindow *self)
+{
+  g_print("connect button clicked");
 }
 
 static void
 xmppdbg_window_init (XmppdbgWindow *self)
 {
   gtk_widget_init_template (GTK_WIDGET (self));
+
+  g_autoptr (GSimpleAction) connect_action = g_simple_action_new ("connect", NULL);
+  g_signal_connect (connect_action,
+                    "activate",
+                    G_CALLBACK (xmppdbg_window__cb),
+                    self);
+  g_action_map_add_action (G_ACTION_MAP (self),
+                           G_ACTION (connect_action));
 }
