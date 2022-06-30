@@ -2,6 +2,7 @@
 <interface>
   <requires lib="gtk" version="4.0"/>
   <template class="XmppdbgWindow" parent="GtkApplicationWindow">
+    <property name="title">XMPP Debugger</property>
     <property name="default-width">600</property>
     <property name="default-height">300</property>
     <child type="titlebar">
@@ -15,12 +16,16 @@
       </object>
     </child>
     <child>
-      <object class="GtkLabel" id="label">
-        <property name="label">Hello, World!</property>
-        <attributes>
-          <attribute name="weight" value="bold"/>
-          <attribute name="scale" value="2"/>
-        </attributes>
+      <object class="GtkGrid" id="maingrid">
+        <child>
+          <object class="GtkButton" id="button1">
+            <property name="label">Button 1</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
       </object>
     </child>
   </template>
