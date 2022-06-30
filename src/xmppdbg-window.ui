@@ -18,8 +18,8 @@
     <child>
       <object class="GtkGrid" id="maingrid">
         <child>
-          <object class="GtkLabel" id="label_jid">
-            <property name="label">JID</property>
+          <object class="GtkEntry" id="entr_jid">
+            <property name="placeholder-text">JID</property>
             <layout>
               <property name="column">0</property>
               <property name="row">0</property>
@@ -27,11 +27,29 @@
           </object>
         </child>
         <child>
-          <object class="GtkButton" id="button1">
-            <property name="label">Button 1</property>
+          <object class="GtkEntry" id="entr_password">
+            <property name="placeholder-text">Password</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entr_resource">
+            <property name="placeholder-text">Resource</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_connect">
+            <property name="label">Connect</property>
             <layout>
               <property name="column">1</property>
-              <property name="row">0</property>
+              <property name="row">2</property>
             </layout>
           </object>
         </child>
